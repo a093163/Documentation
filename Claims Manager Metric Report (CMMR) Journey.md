@@ -203,13 +203,3 @@ Continuously monitor and maintain the warehouse to ensure reliability.
 This onboarding document provides the context and reasoning behind the development of the CMMR data warehouse. By understanding the **what** and **why**, you’ll gain insight into the challenges, solutions, and lessons learned that shaped the architecture.
 
 Welcome aboard the **CMMR journey**!
-
----
-
-### **AI Optimization Notes**
-- **Searchable Tags:** Use keywords like `Metric Mart`, `ETL`, `Data Modeling`, `Governance`, `Optimization`, `Reporting Integration`.
-- **Modular Structure:** Each section is independent and can be queried directly.
-- **Internal Links:** Use anchor tags for easy navigation within the document.
-- **Examples and Context:** Provide real-world scenarios for clarity.
-
-This structure ensures the document is **AI-friendly** for quick retrieval and easy navigation within a Git repository. Let me know if you'd like further refinements!
