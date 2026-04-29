@@ -72,7 +72,7 @@ This task combines internal metric registration and parameter capture so the tea
 
 ---
 
-## 03. Request customer review / feedback / signoff
+## 03. Request customer feedback / signoff
 
 ### Description
 Notify the requesting customer that the metric definition is ready for review. Provide the SQL definition and supporting notes and ask the customer to review the query and provide feedback if needed. Include any additional follow-up questions related to the definition or missing parameter values that have been documented.
@@ -88,7 +88,7 @@ The purpose of this task is to get targeted customer input, not to make the cust
 
 ---
 
-## 04. Obtain sponsor-group signoff
+## 04. Obtain sponsor signoff
 
 ### Description
 If the metric applies to more than one sponsor, create a separate task for each applicable group and capture each sponsor’s review outcome. This ensures that metrics with cross-group relevance are aligned with the appropriate business stakeholders before final approval is recorded. These tasks are just place holders indicating we are waiting for sponsor signoff. During this time the PBI card should be moved to the customer signoff bucket in the board.
@@ -104,7 +104,7 @@ If the metric applies to more than one sponsor, create a separate task for each 
 
 ---
 
-## 05. Capture customer approval or feedback
+## 05. Capture customer approval and feedback
 
 ### Description
 If any revisions are requested, make sure they are clearly documented, including any information about missing parameter values that was requested from the customer. If approved, confirm that all required parameter values are known and all customer-requested revisions have been addressed. Create a PBI for metric ingestion and link it to this metric definition PBI.
@@ -190,7 +190,7 @@ Note: Metric extracts can only use fact and dimension tables. If a required fiel
 
 ---
 
-## 03. Load metric mart via approved SP
+## 03. Load metric into MetricMart via SP
 
 ### Description
 Convert the abbreviated metric extract script into the full metric extract script that includes the insert into statement, all required fields used for the metric definition and global filters, and the parameterized metric lag and date parameters.
@@ -206,7 +206,7 @@ Add the full metric extract script to the etl.MetricMartJobConfig table and load
 
 ---
 
-## 04. Validate and reconcile metric in report
+## 04. Validate and reconcile metric to report
 
 ### Description
 After the normal report refresh completes, export the metric results from the Power BI report. There is a hidden page in the report that can be accessed by clicking in the very lower right-hand corner of the home page. This hidden page is set up so you can filter for the new metric and export the results.
@@ -221,7 +221,7 @@ Reconcile the exported results back to the abbreviated metric extract results. T
 
 ---
 
-## 05. Obtain report SME signoff
+## 05. Obtain developer SME signoff
 
 ### Description
 Set up and complete a review with a report SME. The report SME reviews the customer approval, customer-facing definition, comments and discussion history, and each reconciliation performed during ingestion. Any questions raised during review must be resolved before their approval is recorded and this task is completed.
