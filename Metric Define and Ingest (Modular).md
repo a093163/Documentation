@@ -5,7 +5,7 @@ Before the PBI starts, all the following must be true:
 - Sponsor is identified.
 - Metric is established or settled and on its way to becoming established.
 - Metric is not a duplicate of an existing metric with a different name.
-- Metric name has been agreed upon that meets naming standards.
+- Metric name has been agreed upon that meets agreed naming conventions.
 - The PBI card for metric definition has been created.
 
 ---
@@ -15,15 +15,14 @@ Before the PBI starts, all the following must be true:
 **CMMR: Metric – Define - UpdateMetricNameHere**
 
 ## PBI description
-Turn this customer metric into a precise, customer-verifiable definition so the requesting customer can review, clarify, and approve a definition that is ready for ingestion into the CMMR reporting.
+Turn this customer metric into a precise, customer-verifiable definition so the requesting customer can review and approve a definition that is ready for ingestion into the Claims Manager Metric Report.
 
 ## PBI acceptance criteria
 - The metric request was reviewed and is eligible to be added to the CMMR.
 - A customer-verifiable SQL definition and supporting notes are documented in the PBI discussion.
 - The metric and all required reporting parameters are recorded in the maintained source used to update DimMetric, and any metric-related questions that were asked have documented customer responses.
 - If revisions were requested by the customer, the requested changes are completed and clearly documented.
-- The requesting customer has approved the metric definition.
-- Any applicable sponsor-group approvals are documented.
+- The requesting sponsers have approved the metric definition.
 - The PBI card for metric ingestion has been created and linked to this PBI.
 
 ---
@@ -38,7 +37,7 @@ While completing this task, many of the metric parameters may naturally become k
 ### Acceptance criteria
 - The customer-verifiable metric query is documented in the PBI discussion.
 - Supporting notes are documented in the PBI discussion.
-- The definition is grouped by accounting month and the org groups specified by the sponsor group.
+- The definition is grouped by accounting month and org groups specified by the sponsor group.
 - The definition source is identified as certified, trusted, or customer/SME-supported.
 - Any assumptions, exclusions, interpretation decisions, or unresolved definition questions are explicitly documented.
 - The definition is complete enough for customer review.
@@ -48,7 +47,7 @@ While completing this task, many of the metric parameters may naturally become k
 ## 02. Register metric and available parameters
 
 ### Description
-Once the metric definition is complete enough for review, create or update the metric record in the source used to populate DimMetric and add all parameter values that are already known from the definition work. This task is not meant to block on every unknown value being resolved. Instead, record available information, document missing items for follow-up, and prepare those follow-ups to be requested from the customer in the next task.
+Once the metric definition is complete enough for review, create or update the metric record in the source used to populate DimMetric with the metric name, and metric status of 'QA', and add all other parameter values that are already known from the definition work. This task is not meant to block on every unknown value being resolved. Instead, record available information, document missing items for follow-up, and prepare those follow-ups to be requested from the customer in the next task.
 
 This task combines internal metric registration and parameter capture so the team has one working record of what is already known before customer review begins.
 
@@ -57,11 +56,11 @@ This task combines internal metric registration and parameter capture so the tea
 - The metric can be uniquely identified.
 - All currently known parameter values are recorded.
 - Missing parameter values are documented for follow-up.
-- The metric is marked QA at this stage.
+- The metric status is marked as 'QA'.
 - No duplicate metric entry is created.
 
 ### Parameters to capture when available
-- Metric Name
+- Metric Aliases
 - CHS Flag
 - Result Format
 - Result YOY Change Description
@@ -92,16 +91,15 @@ The purpose of this task is to get targeted customer input, not to make the cust
 ## 04. Obtain sponsor-group signoff
 
 ### Description
-If the metric applies to more than one sponsor group, create a separate task for each applicable group and capture each group’s review outcome. This ensures that metrics with cross-group relevance are aligned with the appropriate business stakeholders before final approval is recorded. The sponsor groups do not see these tasks they are just place holders indicating we are waiting for a customer signoff. During this time the PBI card should be moved to the customer signoff bucket in the board.
+If the metric applies to more than one sponsor, create a separate task for each applicable group and capture each sponsor’s review outcome. This ensures that metrics with cross-group relevance are aligned with the appropriate business stakeholders before final approval is recorded. These tasks are just place holders indicating we are waiting for sponsor signoff. During this time the PBI card should be moved to the customer signoff bucket in the board.
 
 ### Acceptance criteria
-- A separate signoff task exists for each applicable sponsor group.
+- A separate signoff task exists for each applicable sponsor.
 - Each group task documents one of the following:
   - approved
   - approved with comments
   - changes requested
   - not applicable
-- Any changes requested are documented for rework.
 - Required group approvals are completed before the Define Metric PBI is closed.
 
 ---
@@ -111,7 +109,7 @@ If the metric applies to more than one sponsor group, create a separate task for
 ### Description
 If any revisions are requested, make sure they are clearly documented, including any information about missing parameter values that was requested from the customer. If approved, confirm that all required parameter values are known and all customer-requested revisions have been addressed. Create a PBI for metric ingestion and link it to this metric definition PBI.
 
-While defining the metric, if you did not recognize a source table, check whether it already exists in the warehouse. If the table does not exist in the warehouse, create an link a dependency PBI to the metric definition PBI.
+While defining the metric, if you did not recognize a source table, check whether it exists in the warehouse. If the table does not exist in the warehouse, create an dependency link PBI to the metric definition PBI.
 
 ### Acceptance criteria
 - If revisions were requested, the requested changes are clearly documented, including any information about missing parameter values that was requested.
@@ -128,7 +126,7 @@ While defining the metric, if you did not recognize a source table, check whethe
 Before the PBI starts, all the following must be true:
 - The Define Metric PBI has been completed and approved.
 - The PBI card for metric ingestion has been created and linked to the approved Define Metric PBI.
-- Any dependency PBIs that were attached have been completed.
+- Any dependency PBIs, that were attached dureing the define metric steps, have been completed.
 - All required metric parameters are known.
 
 ---
@@ -138,14 +136,14 @@ Before the PBI starts, all the following must be true:
 **CMMR: Metric – Ingest - UpdateMetricNameHere**
 
 ## PBI description
-Ingest the approved customer metric into the warehouse model, reconcile it at each layer, validate it to the CMMR report, obtain report SME approval, and activate the metric for customer consumption.
+Ingest the approved customer metric into the warehouse model, reconcile it at each layer, validate it to the Claims Mananger Metric report, obtain report SME approval, and activate the metric for customer consumption.
 
 ## PBI acceptance criteria
 - The approved metric definition has been rebuilt using warehouse source tables and reconciled to the approved customer definition at the row level.
 - An abbreviated metric extract script has been created and reconciled to the replicated query at the row level.
 - A full metric extract script has been created and added to etl.MetricMartJobConfig.
 - The metric has been loaded into the MetricMart using the approved stored procedure only.
-- Validation in the Power BI report has been completed after the normal report refreshes, and the aggregated abbreviated metric extract reconciliation shows zero differences.
+- Validation to the Claims Manager Metric Report has been completed after the daily refresh cycle completed, and the aggregated abbreviated metric extract reconciliation shows zero differences.
 - Report SME approval is documented in the PBI.
 - The metric status has been updated to Active and is reflected in DimMetric after the normal update process.
 - The metric is available in the report after the next report refresh.
@@ -244,7 +242,7 @@ Set up and complete a review with a report SME. The report SME reviews the custo
 ## 06. Set metric status to Active
 
 ### Description
-Update the recorded metric status to Active. Any recorded metric changes are only updated in the DimMetric table nightly and only refreshed in the report after the subsequent report refresh is complete.
+update the metric status in the source used to populate DimMetric to 'Active'. Any recorded metric changes are only updated in the DimMetric table nightly and only refreshed in the report after the subsequent report refresh is complete.
 
 This step may only occur after report SME signoff is complete.
 
