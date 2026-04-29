@@ -252,6 +252,3 @@ This step may only occur after report SME signoff is complete.
 - The status was not updated before report SME signoff was completed.
 - The metric is available in the report after the next report refresh.
 
----
-
-If you want, I can next format this into a version that is even easier to paste into Azure DevOps or Jira, with each PBI and task in a compact backlog-entry layout.
