@@ -1,7 +1,3 @@
-Absolutely — here is your cleaned-up version with the content preserved and none of the recommended changes applied.
-
----
-
 # Entry Criteria for PBI 1: Define Metric
 
 Before the PBI starts, all the following must be true:
