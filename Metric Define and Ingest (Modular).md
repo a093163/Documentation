@@ -49,7 +49,7 @@ While completing this task, many of the metric parameters may naturally become k
 ### Description
 Once the metric definition is complete enough for review, insert or update the metric record in the source used to populate DimMetric with the metric name, and metric status of 'QA', and add all other parameter values that are already known from the definition work. This task is not meant to block on every unknown value being resolved. Instead, record available information, document missing items for follow-up, and prepare those follow-ups to be requested from the customer in the next task.
 
-### Parameters to capture when available 
+Parameters to capture when available:
 - Metric Aliases
 - CHS Flag
 - Result Format
