@@ -1,7 +1,5 @@
 
-## 2. A more flexible naming structure
-
-The core fix is simple:
+## How do I title a PBI card?
 
 Separate these ideas cleanly:
 
