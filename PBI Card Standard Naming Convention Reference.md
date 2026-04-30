@@ -29,6 +29,7 @@ Why the card exists.
 
 Suggested controlled list:
 - Bug
+- Change
 - Enhancement
 - Spike
 - Tech Debt
