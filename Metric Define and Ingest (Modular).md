@@ -2,7 +2,7 @@
 
 Before the PBI starts, all the following must be true:
 - Customer owner is identified.
-- Sponsor is identified.
+- customer is identified.
 - Metric is established or settled and on its way to becoming established.
 - Metric is not a duplicate of an existing metric with a different name.
 - Metric name has been agreed upon that meets agreed naming conventions.
@@ -22,7 +22,7 @@ Turn this customer metric into a precise, customer-verifiable definition so the 
 - A customer-verifiable SQL definition and supporting notes are documented in the PBI discussion.
 - The metric and all required reporting parameters are recorded in the maintained source used to update DimMetric, and any metric-related questions that were asked have documented customer responses.
 - If revisions were requested by the customer, the requested changes are completed and clearly documented.
-- The requesting sponsers have approved the metric definition.
+- The requesting cusotmer(s) have approved the metric definition.
 - The PBI card for metric ingestion has been created and linked to this PBI.
 
 ---
@@ -30,36 +30,26 @@ Turn this customer metric into a precise, customer-verifiable definition so the 
 ## 01. Draft customer-verifiable metric query
 
 ### Description
-Create the initial SQL definition for the requested metric using customer-accessible external tables. The SQL must be precise enough for the customer to run independently and verify that the definition matches the intended business meaning. Include supporting notes that explain the definition source, any assumptions, exclusions, and interpretation decisions made while drafting the query. The output must be grouped by the accounting month and org groups specified by the sponsor group.
+Create the initial SQL definition for the requested metric using customer-accessible external tables. The SQL must be precise enough for the customer to run independently and verify that the definition matches the intended business meaning. Include supporting notes that explain the definition source, any assumptions, exclusions, and interpretation decisions made while drafting the query. The output must be grouped by the accounting month and org groups specified by the customer group.
 
 While completing this task, many of the metric parameters may naturally become known. Those do not need to be finalized here, but they should inform the next task.
 
 ### Acceptance criteria
 - The customer-verifiable metric query is documented in the PBI discussion.
 - Supporting notes are documented in the PBI discussion.
-- The definition is grouped by accounting month and org groups specified by the sponsor group.
+- The definition is grouped by accounting month and org groups specified by the customer group.
 - The definition source is identified as certified, trusted, or customer/SME-supported.
 - Any assumptions, exclusions, interpretation decisions, or unresolved definition questions are explicitly documented.
 - The definition is complete enough for customer review.
 
 ---
 
-## 02. Register metric and available parameters
+## 02. Insert into/Update metric master
 
 ### Description
-Once the metric definition is complete enough for review, create or update the metric record in the source used to populate DimMetric with the metric name, and metric status of 'QA', and add all other parameter values that are already known from the definition work. This task is not meant to block on every unknown value being resolved. Instead, record available information, document missing items for follow-up, and prepare those follow-ups to be requested from the customer in the next task.
+Once the metric definition is complete enough for review, insert or update the metric record in the source used to populate DimMetric with the metric name, and metric status of 'QA', and add all other parameter values that are already known from the definition work. This task is not meant to block on every unknown value being resolved. Instead, record available information, document missing items for follow-up, and prepare those follow-ups to be requested from the customer in the next task.
 
-This task combines internal metric registration and parameter capture so the team has one working record of what is already known before customer review begins.
-
-### Acceptance criteria
-- A metric record exists in the source used to update DimMetric.
-- The metric can be uniquely identified.
-- All currently known parameter values are recorded.
-- Missing parameter values are documented for follow-up.
-- The metric status is marked as 'QA'.
-- No duplicate metric entry is created.
-
-### Parameters to capture when available
+### Parameters to capture when available 
 - Metric Aliases
 - CHS Flag
 - Result Format
@@ -69,6 +59,15 @@ This task combines internal metric registration and parameter capture so the tea
 - Result Calculation Desc
 - SME
 - SME Group
+- (remaining parameters are not required)
+
+### Acceptance criteria
+- A metric record exists in the source used to update DimMetric.
+- The metric can be uniquely identified.
+- All currently known parameter values are recorded.
+- Missing parameter values are documented for follow-up.
+- The metric status is marked as 'QA'.
+- No duplicate metric entry is created.
 
 ---
 
@@ -88,13 +87,13 @@ The purpose of this task is to get targeted customer input, not to make the cust
 
 ---
 
-## 04. Obtain sponsor signoff
+## 04. Obtain customer signoff
 
 ### Description
-If the metric applies to more than one sponsor, create a separate task for each applicable group and capture each sponsor’s review outcome. This ensures that metrics with cross-group relevance are aligned with the appropriate business stakeholders before final approval is recorded. These tasks are just place holders indicating we are waiting for sponsor signoff. During this time the PBI card should be moved to the customer signoff bucket in the board.
+If the metric applies to more than one customer, create a separate task for each applicable group and capture each customer’s review outcome. This ensures that metrics with cross-group relevance are aligned with the appropriate business stakeholders before final approval is recorded. These tasks are just place holders indicating we are waiting for customer signoff. During this time the PBI card should be moved to the customer signoff bucket in the board.
 
 ### Acceptance criteria
-- A separate signoff task exists for each applicable sponsor.
+- A separate signoff task exists for each applicable customer.
 - Each group task documents one of the following:
   - approved
   - approved with comments
