@@ -32,6 +32,7 @@ Suggested controlled list:
 - Feature
 - Change
 - Enhancement
+- New Capability
 - Spike
 - Tech Debt
 - Docs
