@@ -171,7 +171,6 @@ That is the simplest rule of thumb.
 ---
 
 # Short talk track
-Here’s a version you could say out loud:
 
-> We know some task times are overstated because tasks are occasionally left open in the system after the work is finished. To prevent those records from distorting the benchmark, we statistically remove only the extreme high values that fall far outside the normal pattern for similar work. We then look at both the median and the average. The median tells us the typical task time, while the average shows the overall impact of longer tasks. We also measure skew, which tells us whether the average is being pulled away from what is typical. If skew is moderate or high, we rely more on the median for coaching conversations.
+> We know some task times are overstated because tasks are occasionally left open in the system after the work is finished. To prevent those records from distorting the benchmark, we statistically remove only the extreme high values that fall far outside the normal pattern for similar work. We then look at both the median and the average. The median tells us the typical task time, while the average shows the overall impact of longer tasks. We also measure skew, which tells us whether the average is being pulled away from what is typical. 
 

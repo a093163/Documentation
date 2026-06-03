@@ -689,9 +689,3 @@ git diff --name-only HEAD
 - Do not commit directly to `dev`
 - Do not commit directly to `main`
 - Do not promote all of `dev` to Prod unless that is intentional
-
-If you want, I can also turn this into a more polished `README.md` with:
-- a table of contents
-- collapsible sections
-- callout formatting
-- a shorter “quick start” version for analysts

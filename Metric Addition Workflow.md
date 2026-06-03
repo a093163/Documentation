@@ -183,6 +183,3 @@ Ingest the metric into the data warehouse, reconcile results, and enable the met
 - **Examples and Scenarios:** Provide context for common queries.
 - **FAQ Section:** Anticipate frequently asked questions and provide concise answers.
 
----
-
-This structure is designed to ensure AI tools can parse, locate, and retrieve instructions efficiently when users ask general or specific questions in a Git repository. Let me know if you'd like further refinements!

@@ -68,4 +68,3 @@ Good verbs:
 - Validate
 - Standardize
 
-Keep it outcome-focused and short.
