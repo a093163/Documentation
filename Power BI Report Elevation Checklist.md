@@ -159,14 +159,6 @@ git merge dev
 git status
 ```
 
-- [ ] Optionally list only the changed file names:
-
-```bash
-git diff --name-only
-```
-
-- [ ] Confirm the changed files match the report and semantic model you intended to update
-
 ### Stage your changes
 
 - [ ] If all changed files belong to this report update, stage everything:
