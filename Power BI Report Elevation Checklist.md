@@ -57,6 +57,7 @@ Use this checklist each time you make a change to a Power BI report.
 
 ### Prepare your local repository
 
+- [ ] Clone repo on the share drive BI folder under your LanId (U: is extremly slow)
 - [ ] Open the repository in VS Code or Visual Studio
 - [ ] Open a terminal in the repository folder
 - [ ] Check your current branch and file status by running:
