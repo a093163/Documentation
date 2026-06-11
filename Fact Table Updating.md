@@ -33,33 +33,33 @@ Review the existing script for any relevant logic.
 
 ---
 
-## 02. Complete DW approval process for new field names
+## 02. Create new field names (DW approval)
 
 ### Description
-Complete DW approval process for new field names.
+Create new field names (DW approval).
 
 ### Acceptance Criteria
-- Complete DW approval process for new field names.
+- Create new field names (DW approval).
 
 ---
 
-## 03. Incorporate new fact(s) into existing initial load script
+## 03. Add new fields(s) to initial load script
 
 ### Description
-Incorporate the new fact(s) into the existing initial load script.
+Add new fields(s) to initial load script.
 
 ### Acceptance Criteria
-- The new fact(s) are incorporated into the existing initial load script.
+- Add new fields(s) to initial load script.
 
 ---
 
-## 04. Add new fact(s) to existing DDL
+## 04. Add new fields(s) to existing DDL
 
 ### Description
-Add the new fact(s) to the existing DDL.
+Add new fields(s) to existing DDL.
 
 ### Acceptance Criteria
-- The new fact(s) are added to the existing DDL.
+- Add new fields(s) to existing DDL.
 
 ---
 
