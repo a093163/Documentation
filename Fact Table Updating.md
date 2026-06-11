@@ -12,6 +12,7 @@ Identify required fields from the source tables referenced in the validated metr
 
 ## Acceptance Criteria
 - The existing script is reviewed for any relevant logic.
+- The field names have been approved by the DW team.
 - The new fact(s) are incorporated into the existing initial load script.
 - The new fact(s) are added to the existing DDL.
 - The fact table is loaded with sample data.
@@ -32,7 +33,17 @@ Review the existing script for any relevant logic.
 
 ---
 
-## 02. Incorporate new fact(s) into existing initial load script
+## 02. Complete DW approval process for new field names
+
+### Description
+Complete DW approval process for new field names.
+
+### Acceptance Criteria
+- Complete DW approval process for new field names.
+
+---
+
+## 03. Incorporate new fact(s) into existing initial load script
 
 ### Description
 Incorporate the new fact(s) into the existing initial load script.
@@ -42,7 +53,7 @@ Incorporate the new fact(s) into the existing initial load script.
 
 ---
 
-## 03. Add new fact(s) to existing DDL
+## 04. Add new fact(s) to existing DDL
 
 ### Description
 Add the new fact(s) to the existing DDL.
@@ -52,7 +63,7 @@ Add the new fact(s) to the existing DDL.
 
 ---
 
-## 04. Load fact table with sample data
+## 05. Load fact table with sample data
 
 ### Description
 Load the fact table with sample data.
@@ -62,7 +73,7 @@ Load the fact table with sample data.
 
 ---
 
-## 05. Add new fact(s) to existing merge script
+## 06. Add new fact(s) to existing merge script
 
 ### Description
 Add the new fact(s) to the existing merge script.
@@ -72,7 +83,7 @@ Add the new fact(s) to the existing merge script.
 
 ---
 
-## 06. Elevate DDL script
+## 07. Elevate DDL script
 
 ### Description
 Elevate the DDL script.
@@ -82,7 +93,7 @@ Elevate the DDL script.
 
 ---
 
-## 07. Execute initial load script
+## 08. Execute initial load script
 
 ### Description
 Execute the initial load script.
@@ -92,7 +103,7 @@ Execute the initial load script.
 
 ---
 
-## 08. Elevate merge script
+## 09. Elevate merge script
 
 ### Description
 Elevate the merge script.
@@ -102,7 +113,7 @@ Elevate the merge script.
 
 ---
 
-## 09. Execute weekly merge script
+## 10. Execute weekly merge script
 
 ### Description
 Execute the weekly merge script.
