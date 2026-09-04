@@ -16,10 +16,11 @@
 
 ---
 
-## 1. Go to your repo using Pygressive
+## 1. Open your Pygressive workspace
 
-- Setting up Pygressive
-- Going to Pygressive
+- https://pygressive-web-ba-pygressive-dynamic-prod-r.apps.p1-us-e1.openstack.ocp.pgrcloud.app/list_workspaces
+
+> Note: If you are going to use Copilot, log in to Copilot first and follow the prompts. After you authorize, you will need to log in to Copilot again. Once that is complete, you should see the model options.
 
 ---
 
@@ -51,7 +52,7 @@ See glossary: [git checkout](#git-checkout), [git pull](#git-pull)
 - `git checkout main` switches you to local `main`
 - `git pull origin main` updates local `main` from remote `main`
 
-> Note: you may have to enter your Azure DevOps credentials.
+> Note: you may have to enter your Azure DevOps credentials or token.
 
 Related help:
 - Where do I find this password
@@ -169,7 +170,7 @@ See glossary: [git push](#git-push)
 
 - Pushes new local commits to the already-linked remote branch
 
-> Note: you may have to enter your Azure DevOps credentials.
+> Note: you may have to enter your Azure DevOps credentials or token.
 
 Related help:
 - Where do I find this password
